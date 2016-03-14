@@ -57,8 +57,8 @@ public class JsonExample {
 			FileReader file = new FileReader(
 					"C:\\Users\\srila\\Desktop\\srilatha\\jsonparser\\src\\main\\java\\com\\json\\parse\\jsonparser\\Employee.json");
 			Employee employee = mapper.readValue(file, Employee.class);
-			System.out.println(employee);
-			System.out.println(employee.getAddress());
+			logger.info(employee.toString());
+			logger.info(employee.getAddress().toString());
 		} catch (JsonParseException jpe) {
 
 			logger.info(jpe.getMessage());
